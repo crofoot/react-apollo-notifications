@@ -1,21 +1,41 @@
-import * as React from 'react'
-import { NotificationList } from "./components/NotificationList";
-import { NotificationProvider } from './components/NotificationProvider';
-import { NotificationSubscription } from "./components/NotificationSubscription";
+import './styles.css';
+import * as React from 'react';
+import { Subscription, SubscriptionResult } from "react-apollo";
+import NotificationCreator from './components/NotificationManager';
+import NotificationContainer from './components/NotificationContainer';
 
-export type Props = {
-  subscription: any
+
+type Props = {
+  subscription: any;
+  enterTimeout?: number;
+  leaveTimeout?: number;
 }
+
+
 
 export class Notifications extends React.Component<Props> {
 
   render() {
     return (
-      <NotificationProvider>
-        <NotificationList />
-        <NotificationSubscription subscription={this.props.subscription} />
-      </NotificationProvider>
+      <React.Fragment>
+        <Subscription subscription={this.props.subscription} fetchPolicy="no-cache">
+          {(results: SubscriptionResult) => {
+            if (results.loading && results.data === undefined) return null;
+            if (results.data) {
+              setTimeout(() => {
+                NotificationCreator.create(results.data[Object.keys(results.data)[0]]);
+              }, 0);
+            }
+            return null;
+          }}
+        </Subscription>
+        <NotificationContainer
+          enterTimeout={(this.props.enterTimeout ? this.props.enterTimeout : 4000)}
+          leaveTimeout={(this.props.leaveTimeout ? this.props.leaveTimeout : 4000)}
+        />
+      </React.Fragment>
     )
   }
 
 }
+
