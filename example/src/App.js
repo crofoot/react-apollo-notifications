@@ -1,13 +1,24 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import ApolloWrapper from "./ApolloWrapper";
+import { Notifications } from 'react-apollo-notifications';
+import gql from 'graphql-tag';
 
-import ExampleComponent from 'react-apollo-notifications'
+
+const NS = gql`
+  subscription {
+    subscribeToNotifications{
+      message
+      date
+    }
+  }
+`;
 
 export default class App extends Component {
-  render () {
+  render() {
     return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
-      </div>
+      <ApolloWrapper>
+        <Notifications subscription={NS} />
+      </ApolloWrapper>
     )
   }
 }

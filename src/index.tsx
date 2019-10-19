@@ -1,23 +1,21 @@
-/**
- * @class ExampleComponent
- */
-
 import * as React from 'react'
+import { NotificationList } from "./components/NotificationList";
+import { NotificationProvider } from './components/NotificationProvider';
+import { NotificationSubscription } from "./components/NotificationSubscription";
 
-import styles from './styles.css'
+export type Props = {
+  subscription: any
+}
 
-export type Props = { text: string }
+export class Notifications extends React.Component<Props> {
 
-export default class ExampleComponent extends React.Component<Props> {
   render() {
-    const {
-      text
-    } = this.props
-
     return (
-      <div className={styles.test}>
-        Example Component: {text}
-      </div>
+      <NotificationProvider>
+        <NotificationList />
+        <NotificationSubscription subscription={this.props.subscription} />
+      </NotificationProvider>
     )
   }
+
 }
