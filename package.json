@@ -22,7 +22,8 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
-    "react-transition-group": "^4.3.0"
+    "animate.css": "^3.7.2",
+    "react-notifications-component": "^2.1.0"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
