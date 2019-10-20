@@ -1,6 +1,6 @@
 {
   "name": "react-apollo-notifications",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Notification component that uses a GraphQL subscription query",
   "author": "crofoot",
   "license": "MIT",
