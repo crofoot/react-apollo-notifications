@@ -55,7 +55,18 @@ export default function App() {
   return (
     <ApolloProvider client={client}>
       <DemoApp />
-      <Notifications subscription={NS} messageProperty='message' titleProperty='title' />
+      <Notifications
+        subscription={NS}
+        messageProperty='message'
+        titleProperty='title'
+        duration={1000}
+        notificationStyle={{
+          animationIn:'rotateIn',
+          animationOut:'rotateOutUpRight',
+          position:'top-center',
+          type:'warning'
+        }}
+      />
     </ApolloProvider>
   )
 

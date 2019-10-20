@@ -1,11 +1,10 @@
 # react-apollo-notifications
 
-> Notification component that uses a GraphQL subscription query
+> Notification component that takes a GraphQL subscription query
 
 [![NPM](https://img.shields.io/npm/v/react-apollo-notifications.svg)](https://www.npmjs.com/package/react-apollo-notifications) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-
-![alt text](https://media.giphy.com/media/Y1qqfXPhYhBUGq1PXq/giphy.gif "Preview")
+[<img src="https://img.youtube.com/vi/err4uJzE0YA/maxresdefault.jpg">](https://youtu.be/err4uJzE0YA)
 
 ## Install
 
@@ -17,7 +16,6 @@ npm install --save react-apollo-notifications
 * Clone [apollo-subscription-server](https://github.com/crofoot/apollo-subscription-server) to set up an apollo server with subscriptions 
 * `npm install --save react-apollo-notifications` to your react project  
 * Calling Notifications 
-
 ```jsx
 import React from 'react';
 import DemoApp from "./DemoApp";
@@ -87,6 +85,7 @@ export default function App() {
 ```
 
 ## Notes
+* [Click here for example](https://github.com/crofoot/react-apollo-notifications/tree/master/example)
 * <strong>react-apollo-notifications</strong> makes use of <strong>react-notifications-component</strong> so the props are identical
 
 
