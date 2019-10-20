@@ -1,6 +1,6 @@
 {
   "name": "react-apollo-notifications",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Notification component that uses a GraphQL subscription query",
   "author": "crofoot",
   "license": "MIT",
@@ -56,6 +56,15 @@
     "rollup-plugin-url": "^1.4.0",
     "typescript": "^2.8.3"
   },
+  "keywords": [
+    "react",
+    "component",
+    "react-apollo",
+    "notification",
+    "notifications",
+    "apollo-client",
+    "react-notifications"
+  ],
   "files": [
     "dist"
   ]
