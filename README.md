@@ -2,7 +2,9 @@
 
 > Notification component that takes a GraphQL subscription query
 
-[![NPM](https://img.shields.io/npm/v/react-apollo-notifications.svg)](https://www.npmjs.com/package/react-apollo-notifications) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-apollo-notifications.svg)](https://www.npmjs.com/package/react-apollo-notifications) 
+[![Build Status](https://travis-ci.org/crofoot/react-apollo-notifications.svg?branch=master)](https://travis-ci.org/crofoot/react-apollo-notifications)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 [<img src="https://img.youtube.com/vi/err4uJzE0YA/maxresdefault.jpg">](https://youtu.be/err4uJzE0YA)
 
